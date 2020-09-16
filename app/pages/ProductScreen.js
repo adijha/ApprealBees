@@ -411,7 +411,9 @@ const Screen = (props) => {
                 marginRight: 10,
               }}
             />
-            <Text>Sleeve Type: Half</Text>
+            <Text style={{fontSize: 15, marginVertical: 5}}>
+              Sleeve Type: Half
+            </Text>
           </View>
           <View
             style={{
@@ -428,7 +430,9 @@ const Screen = (props) => {
                 marginRight: 10,
               }}
             />
-            <Text>Material: Cotton</Text>
+            <Text style={{fontSize: 15, marginVertical: 5}}>
+              Material: Cotton
+            </Text>
           </View>
           <View
             style={{
@@ -445,7 +449,9 @@ const Screen = (props) => {
                 marginRight: 10,
               }}
             />
-            <Text>Pattern: Striped</Text>
+            <Text style={{fontSize: 15, marginVertical: 5}}>
+              Pattern: Striped
+            </Text>
           </View>
         </View>
 
