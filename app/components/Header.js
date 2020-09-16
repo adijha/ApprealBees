@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
   rightIconCover: {
     marginTop: 16,
   },
-  input: {flex: 1, fontSize: 16, paddingLeft: 20},
+  input: {flex: 1, fontSize: 16, paddingLeft: 20, height: 42},
   search: {
     backgroundColor: '#fff',
     marginTop: 15,
