@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, FlatList} from 'react-native';
 import Hr from './Hr';
 import ProductCard from './ProductCard';
 
 import {useNavigation} from '@react-navigation/native';
-const Card = props => {
+const Card = (props) => {
   const navigation = useNavigation();
 
   const [Products, setProducts] = useState([
@@ -96,7 +96,7 @@ const Card = props => {
       img1: 'https://source.unsplash.com/weekly?wood',
       img2: 'https://source.unsplash.com/weekly?pin',
       img3: 'https://source.unsplash.com/weekly?axe',
-      price:20000,
+      price: 20000,
       basePrice: '40000',
       discount: '50%',
       rating: '4.3',
@@ -180,8 +180,10 @@ const Card = props => {
       <Text style={styles.title}>{props.title}</Text>
       <Hr />
       <View style={[styles.product, {marginTop: 10}]}>
-        {Products
-          ? Products.map(item => (
+        <FlatList
+          data={Products && Products}
+          renderItem={({item, index}) => {
+            return (
               <ProductCard
                 img={item.img}
                 text={item.title}
@@ -193,8 +195,11 @@ const Card = props => {
                   })
                 }
               />
-            ))
-          : null}
+            );
+          }}
+          numColumns={2}
+          keyExtractor={(item, index) => index.toString()}
+        />
       </View>
     </View>
   );
